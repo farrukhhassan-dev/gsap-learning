@@ -53,7 +53,7 @@ button{
         position: absolute;
         right: 0;
         width: 100%;
-        height: auto;
+        height: 100%;
         }
     }
 }
@@ -193,6 +193,14 @@ button{
 
 }
 
+/*Bird*/ 
+// .st0 {
+//     transform:
+//     rotateX(51deg)
+//     rotateZ(43deg);
+//   transform-style: preserve-3d;
+// }
+
 /* Default Style*/
 .section-title{
     font-size: 2em;
@@ -201,3 +209,53 @@ button{
     letter-spacing: 6px;
     color: #0e0037;
     }
+
+    body {
+        background-color: black;
+        margin:20px;
+        font-family:Arial, sans-serif;
+      }
+      
+
+      
+     
+
+      
+      
+      
+
+      
+
+g#left-wing > #part-1, g#left-wing > #part-2, g#left-wing > #part-3{
+    -webkit-animation: wings3 2s infinite;
+    -moz-animation: wings3 2s infinite;
+    -o-animation: wings3 2s infinite;
+        animation: wings3 2s infinite;
+    position: absolute;
+    bottom: 0;
+}
+@keyframes wings3 {
+    0%, 100% {
+    transform: rotate3d(1, 0.6, 0, 0deg)  translate(-0.2%, 0.5%);
+    }
+    50% {
+    transform: rotate3d(1, 0.6, 0, 180deg)  translate(-0.2%, 0.5%);
+    }
+}
+
+#hero .illustration svg{
+    -webkit-animation: fly 2s infinite;
+    -moz-animation: fly 2s infinite;
+    -o-animation: fly 2s infinite;
+        animation: fly 2s infinite;
+        transition: all 0.2s ease-in-out;
+}
+
+@keyframes fly {
+    0%, 100% {
+    top:0px;
+    }
+    50% {
+        top:20px;
+    }
+}

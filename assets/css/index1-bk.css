@@ -68,7 +68,7 @@ button {
   position: absolute;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 /*Slider*/
@@ -184,59 +184,6 @@ button {
   transition: opacity 0.5s ease 0s;
 }
 
-#one {
-  background-color: #0e0037;
-}
-
-#two {
-  background-color: #ffd50f;
-}
-
-#three {
-  background-color: brown;
-}
-
-#four {
-  background-color: orange;
-}
-
-.slider.active {
-  z-index: 9;
-  opacity: 1;
-}
-
-.slider {
-  opacity: 0;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
-}
-
-/*Bird*/
-#bird {
-  z-index: 99;
-  position: relative;
-}
-
-#bird {
-  overflow: hidden;
-  height: 100vh;
-}
-
-#bird .container {
-  height: 100%;
-}
-
-#bird .row {
-  height: 100%;
-}
-
-#bird p {
-  font-size: 3em;
-  margin-top: 30px;
-  font-weight: 700;
-}
-
-/*Bird*/
 /* Default Style*/
 .section-title {
   font-size: 2em;
@@ -245,64 +192,4 @@ button {
   letter-spacing: 6px;
   color: #0e0037;
 }
-
-body {
-  background-color: black;
-  margin: 20px;
-  font-family: Arial, sans-serif;
-}
-
-g#left-wing > #part-1, g#left-wing > #part-2, g#left-wing > #part-3 {
-  -webkit-animation: wings3 2s infinite;
-  animation: wings3 2s infinite;
-  position: absolute;
-  bottom: 0;
-}
-
-@-webkit-keyframes wings3 {
-  0%, 100% {
-    -webkit-transform: rotate3d(1, 0.6, 0, 0deg) translate(-0.2%, 0.5%);
-            transform: rotate3d(1, 0.6, 0, 0deg) translate(-0.2%, 0.5%);
-  }
-  50% {
-    -webkit-transform: rotate3d(1, 0.6, 0, 180deg) translate(-0.2%, 0.5%);
-            transform: rotate3d(1, 0.6, 0, 180deg) translate(-0.2%, 0.5%);
-  }
-}
-
-@keyframes wings3 {
-  0%, 100% {
-    -webkit-transform: rotate3d(1, 0.6, 0, 0deg) translate(-0.2%, 0.5%);
-            transform: rotate3d(1, 0.6, 0, 0deg) translate(-0.2%, 0.5%);
-  }
-  50% {
-    -webkit-transform: rotate3d(1, 0.6, 0, 180deg) translate(-0.2%, 0.5%);
-            transform: rotate3d(1, 0.6, 0, 180deg) translate(-0.2%, 0.5%);
-  }
-}
-
-#hero .illustration svg {
-  -webkit-animation: fly 2s infinite;
-  animation: fly 2s infinite;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-@-webkit-keyframes fly {
-  0%, 100% {
-    top: 0px;
-  }
-  50% {
-    top: 20px;
-  }
-}
-
-@keyframes fly {
-  0%, 100% {
-    top: 0px;
-  }
-  50% {
-    top: 20px;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=index1-bk.css.map */
