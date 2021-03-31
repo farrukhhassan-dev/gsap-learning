@@ -23,13 +23,17 @@ gsap.to(container, {
 });
 
 // scrolltrigger for each box
-gsap.utils.toArray('.box').forEach(box => {
+gsap.utils.toArray('.step').forEach(box => {
   gsap.to(box, {
     backgroundColor: '#ffffff',
     scrollTrigger: {
       trigger: box,
-      start: 'top center',
+      start: 'top top',
       toggleActions: 'play none none reverse',
+      toggleClass: {
+        targets: box,
+        className: "is-active"
+      },
       markers: true
     }
   });

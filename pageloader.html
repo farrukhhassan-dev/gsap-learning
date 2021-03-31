@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+  background: black;
+  color: #000;
+  font-size: 20pt;
+}
+
+.wrapper {
+  display: flex;
+}
+#text{font-size: 50px;font-weight: 500;}
+#text {
+  padding: 0 10px 0 0;
+  margin: 0;
+}
+
+
+#cursor {
+  margin: 0;
+  display: inline-block;
+}
+.overlay {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{width: 100px;}
+.line{
+    border-left: 2px solid rgb(228 69 37);
+    height: 120px;
+    
+    margin-left: 20px;
+}
+.divider{
+    padding-left: 20px;
+    height: 110px;
+    width: 177px;
+    background-color: #fff;
+    z-index: 9;
+    padding-top: 12px;
+}
+
+.loader-content {
+    width: 350px;
+    display: flex;
+}
+.wrapper{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</style>
+<body>
+
+    <div id="page-loader" class="overlay">
+
+        <div class="loader-content">
+            <div class="icon">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 953.9 1080" style="enable-background:new 0 0 953.9 1080;" xml:space="preserve">
+                <style type="text/css">
+                    .st1{fill:#E44525;}
+                    .st0{fill:#E44525;}
+                </style>
+                <g>
+                    <path class="st1" d="M260.3,474.3c49.5,21.2,90.3,52.7,117.5,101.7c26.6,47.8,67,75.1,123.8,54.2c51.9-19.1,68.4-61.2,59-112.8
+                        C549.5,456.7,505,444,450.2,440C348.5,432.7,267,384.9,211,299.5c-35.3-53.8-79.7-84.2-139.9-51.8c-2.4,1.3-4.7,2.6-6.9,4
+                        l113.2,222.2C195.8,459.2,224,458.8,260.3,474.3z"/>
+                </g>
+                <g>
+                    <path class="st0" d="M816.4,236.7c-107.2-5.7-189.5-55.1-249-140.3c-34-48.7-71.8-80.3-131.3-60.3c-51.8,17.4-69.2,60.9-58.7,112.6
+                        c13.2,64.8,63.2,75.4,120,79.3c103.4,7.2,192.3,65.4,243.5,147.6l170.6-86.8C897.3,258.7,864.3,239.3,816.4,236.7z"/>
+                </g>
+                <g>
+                    <path class="st0" d="M465.7,854.5c-9.5-0.1-19-0.6-28.4-1.6l-88.1,98.2c10.3,11.7,20.1,24.4,29.4,37.9c56.8,82.8,124.8,81,183-3.9
+                        c47-68.4,108.2-112.9,183.9-132.2l10.3-179C703.8,781.9,592.8,855.4,465.7,854.5z"/>
+                </g>
+                <g>
+                    <path class="st0" d="M152.1,547.1c-0.1-35.2,8.6-60,25.2-73.2L64.1,251.7c-57.7,35.1-54,88.4-25.6,148.3c44.7,94.3,47.2,190-2,286
+                        c-42.7,83.3-4.5,150.7,88,156.5c93.2,5.8,167.1,43,224.8,108.6l88.1-98.2C281.3,837.2,152.8,702.5,152.1,547.1z"/>
+                </g>
+                <g>
+                    <path class="st0" d="M904.6,386.1c17.5-37.8,19-71.4,6.9-97.2l-170.6,86.8c32.6,52.3,49.9,114.4,46,179.2
+                        c-2.6,42.6-13.4,82.8-31,119.1l-10.3,179c20.1-5.1,41.3-8.5,63.4-10c94.6-6.5,133.5-67.7,94.7-153.6
+                        C857.6,587.4,857.2,488.3,904.6,386.1z"/>
+                </g>
+                </svg>
+            </div>
+
+            <div class="line"></div>
+
+            <div class="divider">
+
+                <span id="text">
+                
+                </span>
+            
+                <span id="text2">
+                
+                </span>
+                
+                <span id="cursor">|</span>
+
+            </div>
+        </div>
+            
+
+    </div>
+
+    <div class="wrapper">
+
+        <h1>Body</h1>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/TextPlugin.min.js"></script>
+    <script>
+    $( window ).on( "load", function() {
+        animateIn();
+        setTimeout(animateOut, 7500);
+    });
+
+    var animateIn = function() {
+
+    var loader = gsap.timeline({repeat: 2, repeatDelay: 1});
+
+    loader.from('.overlay', {backgroundColor:'#e44525',height:0});
+
+    loader.from('.divider', {opacity:0});
+
+    loader.from('.line', 1, {height:0});
+
+    loader.from('.icon', 1, {opacity:0,x:200,rotation:360, transformOrigin:"center center"});
+
+    loader.from('.st1', 1, {rotation:360, transformOrigin:"bottom bottom"});
+        
+    loader.fromTo('#cursor', 1, {
+    autoAlpha: 0, 
+    x:-10}, 
+    {autoAlpha: 1, 
+        repeat: -1, 
+        ease: SteppedEase.config(1)
+    });
+
+    loader.to("#text", {
+        text: {
+            value: "Salsoft"
+        }, 
+        duration: 1,
+        ease: "power2"
+    });
+    loader.to("#text2", {
+        text: {
+            value: "Technologies"
+        }, 
+        duration: 1,
+        ease: "power2"
+    });
+
+    }
+
+    var animateOut = function(){
+
+        gsap.to('.overlay',{
+            backgroundColor:'#e44525',
+            height:0,
+            opacity:0
+        });
+
+    }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/scroll.css">
+<title>Title</title>
+<style>
+#blast{
+    width:100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    height: 100vh;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#blast svg{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+    width: 900px;
+    height: 300px;
+}
+</style>
+</head>
+<body>
+    <button id="btn1">Play Tween</button>
+    <div id="blast">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	    viewBox="0 0 953.9 1080" style="enable-background:new 0 0 953.9 1080;" xml:space="preserve">
+        <style type="text/css">
+            .st0{fill:#E44525;}
+            .st1{fill:#E44525;}
+            .st2{fill:#E44525;}
+            .st3{fill:#E44525;}
+            .st4{fill:#E44525;}
+        </style>
+        <g class="piece-g">
+            <path class="piece st0" d="M260.3,474.3c49.5,21.2,90.3,52.7,117.5,101.7c26.6,47.8,67,75.1,123.8,54.2c51.9-19.1,68.4-61.2,59-112.8
+                C549.5,456.7,505,444,450.2,440C348.5,432.7,267,384.9,211,299.5c-35.3-53.8-79.7-84.2-139.9-51.8c-2.4,1.3-4.7,2.6-6.9,4
+                l113.2,222.2C195.8,459.2,224,458.8,260.3,474.3z"/>
+        </g>
+        <g class="piece-g">
+            <path class="piece st1" d="M816.4,236.7c-107.2-5.7-189.5-55.1-249-140.3c-34-48.7-71.8-80.3-131.3-60.3c-51.8,17.4-69.2,60.9-58.7,112.6
+                c13.2,64.8,63.2,75.4,120,79.3c103.4,7.2,192.3,65.4,243.5,147.6l170.6-86.8C897.3,258.7,864.3,239.3,816.4,236.7z"/>
+        </g>
+        <g class="piece-g">
+            <path class="piece st2" d="M904.6,386.1c17.5-37.8,19-71.4,6.9-97.2l-170.6,86.8c32.6,52.3,49.9,114.4,46,179.2
+                c-2.6,42.6-13.4,82.8-31,119.1l-10.3,179c20.1-5.1,41.3-8.5,63.4-10c94.6-6.5,133.5-67.7,94.7-153.6
+                C857.6,587.4,857.2,488.3,904.6,386.1z"/>
+        </g>
+        <g class="piece-g">
+            <path class="piece st3" d="M465.7,854.5c-9.5-0.1-19-0.6-28.4-1.6l-88.1,98.2c10.3,11.7,20.1,24.4,29.4,37.9c56.8,82.8,124.8,81,183-3.9
+                c47-68.4,108.2-112.9,183.9-132.2l10.3-179C703.8,781.9,592.8,855.4,465.7,854.5z"/>
+        </g>
+        <g class="piece-g">
+            <path class="piece st4" d="M152.1,547.1c-0.1-35.2,8.6-60,25.2-73.2L64.1,251.7c-57.7,35.1-54,88.4-25.6,148.3c44.7,94.3,47.2,190-2,286
+                c-42.7,83.3-4.5,150.7,88,156.5c93.2,5.8,167.1,43,224.8,108.6l88.1-98.2C281.3,837.2,152.8,702.5,152.1,547.1z"/>
+        </g>
+        
+        </svg>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script>
+        gsap.to('.piece-g', {
+            rotation:-360, transformOrigin:"center top"
+        });
+    </script>
+</body>
+</html>
